@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>流布式弹性盒子</title>
+    <style>
+        img{
+            border: 0;
+        }
+    .flex-card-image img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 60%;
+    width: 50%;
+    }
+    .demo-display {
+    /* background:skyblue; */
+    text-align: center;
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540147109826&di=568843583d10c813bf58febd4334b1d7&imgtype=0&src=http%3A%2F%2Fstatic.numbani.cn%2Fforum%2F201605%2F06%2F162404v3oagfw3skywsvwt.jpg);
+    border-bottom: 3px solid pink;
+}
+.demo-display {
+    margin: 0 auto;
+    padding: 1em 5% 2em;
+    width: 100%;
+}
+.l-fullheight {
+    min-height: 100vh;
+}
+.demo-display {
+    box-sizing: border-box;
+    font-family: europa,sans-serif;
+}
+.flex-card{
+    text-align: center;
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540147737750&di=a49996d43d642979522ef3529196302b&imgtype=0&src=http%3A%2F%2Fimg3.178.com%2Foverwatch%2F201604%2F254866946341%2F254867448298.jpg);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 0.6em;
+    margin: 10px;
+    
+}
+.flex-card-button{
+    background: cornsilk;
+    border-radius: 5px;
+    color:peru;
+    display: block;
+    padding: 1em .40em;
+    
+    text-decoration: none;
+    transition:  3s ease;
+    text-align: center;
+}
+        .flexbox .flex-card-list{
+
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+          }
+        .flexbox .flex-card-listitem{
+
+            display: flex;
+        }
+
+        @media all and (min-width:40em){
+
+            .flex-card-list li{
+                width: 50%;
+                list-style-type: none;
+            }
+            /*.no-flexbox*/ .flex-card-list li{
+                float: left;
+                list-style-type: none;
+            }
+        }
+
+        @media all and (min-width:40em) and (max-width:60em){
+
+             /*.no-flexbox*/ .flex-card-list li:nth-child(2n+1){
+                 clear: both;
+                 list-style-type: none;
+             }
+        }
+        @media all and (min-width:60em){
+
+            .flex-card-list li{
+                width: 33.33%;
+                list-style-type: none;
+            }
+
+             /*.no-flexbox*/  .flex-card-list li:nth-child(3n+1){
+                 clear: both;
+                 list-style-type: none;
+             }
+        }
+        .flexbox .flex-card{
+
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+           
+        }
+        .flexbox .flex-card-content{
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+        }
+        .flexbox .flex-card-content p{
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+<body>
+        <figure class="demo-display l-fullheight">
+                
+                <ul class="flex-card-list">
+                    
+                 <li class="flex-card-listitem">
+                     
+                     <div class="flex-card">
+                         
+                         <div class="flex-card-image">
+                          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540144676368&di=4bf15919727cf4a6402fd8836572bceb&imgtype=0&src=http%3A%2F%2Fimg.99danji.com%2Fuploadfile%2F2017%2F0411%2F20170411114547132.gif" alt="">
+                         </div>
+                         
+                         <div class="flex-card-content">
+                          <h3 class="flex-card-heading"></h3>
+                          <p>全场最佳</p>
+                          <a href="#" class="flex-card-button">点击录像</a>
+                         </div>
+                       </div>
+                     </li>
+            
+                     <li class="flex-card-listitem">
+                     
+                     <div class="flex-card">
+                         
+                         <div class="flex-card-image">
+                          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540144953614&di=c200e31a9229111c4ebcb5f6287bdaab&imgtype=0&src=http%3A%2F%2Fstatic.wanplus.com%2Fcrawler%2F2016%2F08%2F26%2F14721644081.png" alt="">
+                         </div>
+                         
+                         <div class="flex-card-content">
+                          <h3 class="flex-card-heading"></h3>
+                          <p>全场最佳</p>
+                          <a href="#" class="flex-card-button">点击录制</a>
+                         </div>
+                       </div>
+                     </li>
+            
+                      <li class="flex-card-listitem">
+                     
+                     <div class="flex-card">
+                         
+                         <div class="flex-card-image">
+                          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540145384595&di=333abc0377d23634470a8428bb6166a4&imgtype=0&src=http%3A%2F%2Falioss.g-cores.com%2Fuploads%2Fimage%2F29948f37-e812-4964-a97f-7f107ed655d4_watermark.gif" alt="">
+                         </div>
+                         
+                         <div class="flex-card-content">
+                          <h3 class="flex-card-heading"></h3>
+                          <p>全场最佳</p>
+                          <a href="#" class="flex-card-button">点击保存</a>
+                         </div>
+                       </div>
+                     </li>
+            
+                         <li class="flex-card-listitem">
+                     
+                     <div class="flex-card">
+                        
+                         <div class="flex-card-image">
+                          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540146056212&di=41a21326d07641c240c52199937f60db&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3Db036e65c42ed2e73fcbc8e28b2318dbd%2F4610b912c8fcc3ce45b1c0eb9a45d688d53f20f0.jpg" alt="">
+                         </div>
+                         
+                         <div class="flex-card-content">
+                          <h3 class="flex-card-heading"></h3>
+                          <p>全场最佳</p>
+                          <a href="#" class="flex-card-button">亮眼表现</a>
+                         </div>
+                       </div>
+                     </li>
+                </ul>
+</body>
+</html>
